@@ -40,3 +40,4 @@ class Product:
             raise ValueError("Количество не может быть меньше ноля")
         self.stock = quantity
         print(f"Склад обновлён: '{self.name}', остаток: {self.stock}")
+        
