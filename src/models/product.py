@@ -2,10 +2,11 @@ from src.models.exceptions import ValidationError
 
 
 class Product:
-    def __init__(self, name, price, quantity):
+    def __init__(self, name, price, quantity, stock=0):
         self.name = name
         self.price = price
         self.quantity = quantity
+        self.stock = stock
 
     def set_price(self, price):
         if price < 0:
@@ -30,3 +31,12 @@ class Product:
 
     def apply_discount(self):
         pass
+
+    def check_stock(self):
+        return self.stock
+
+    def update_stock(self, quantity):
+        if quantity < 0:
+            raise ValueError("Количество не может быть меньше ноля")
+        self.stock = quantity
+        print(f"Склад обновлён: '{self.name}', остаток: {self.stock}")
