@@ -29,15 +29,11 @@ class Product:
             return False
         return self.name == other.name and self.price == other.price
 
-    def apply_discount(self):
-        pass
-
     def check_stock(self):
         return self.stock
 
     def update_stock(self, quantity):
         if quantity < 0:
-            raise ValueError("Количество не может быть меньше ноля")
+            raise ValueError("Количество не может быть отрицательным")
         self.stock = quantity
         print(f"Склад обновлён: '{self.name}', остаток: {self.stock}")
-        
