@@ -30,3 +30,7 @@ class Product:
 
     def apply_discount(self):
         pass
+
+    def get_total_price(self, quantity):
+        # Тест конфликта в ветке feature/test-conflict
+        return self.price * quantity
