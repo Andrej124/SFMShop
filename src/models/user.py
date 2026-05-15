@@ -10,3 +10,5 @@ class User:
         if "@" not in email:
             raise ValidationError("Неверный формат email")
         self._email = email
+
+    '''Тест rebase в ветке main'''
