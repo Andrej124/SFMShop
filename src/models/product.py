@@ -32,5 +32,4 @@ class Product:
         pass
 
     def get_total_price(self, quantity):
-        # Тест конфликта, в ветке main 
         return self.price * quantity
