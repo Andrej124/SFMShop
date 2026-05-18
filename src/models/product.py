@@ -33,3 +33,6 @@ class Product:
 
     def get_total_price(self, quantity):
         return self.price * quantity
+
+    def get_category(self, category):
+        return category
