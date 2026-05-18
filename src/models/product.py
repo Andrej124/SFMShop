@@ -35,5 +35,8 @@ class Product:
         return self.price * quantity
 
     def calculate_shipping(self, weight, distance):
-        rate = 0
-        return weight * distance * rate
+        return 0
+
+    def get_category(self, category):
+        return category
+
